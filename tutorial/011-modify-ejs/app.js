@@ -60,18 +60,11 @@ app
 .use('/js/moment',static(`${appRoot}/node_modules/moment/dist`))
 .use('/js/ejs',static(`${appRoot}/node_modules/ejs`))
 
-.use('/json',static(`./config`))
-
 //middleware 
 .use(function(req,res,next){
   res.locals.title = 'MVC-API'
   next()
 });
-
-// set locals value
-app.locals.footer = require('./config/footer.json')
-app.locals.menu = require('./config/header.json')
-//console.log(app.locals.menu);
 
 app.get('/', function (req, res) {
   res.locals.title = req.t("hello home page")

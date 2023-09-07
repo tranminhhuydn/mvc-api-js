@@ -1,0 +1,57 @@
+<nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+    <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <span class="bi bi-list"></span>
+        <span class="d-none fs-6 pe-1">Browse</span>
+    </button>
+    <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
+        <svg class="bi ms-auto d-block my-1"><use href="#Bootstrap"></use></svg>
+    </a>
+    <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+        <span class="bi bi-three-dots"></span>
+    </button>
+
+    <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+        <div class="offcanvas-header px-4 pb-0">
+          <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+        </div>
+
+        <div class="offcanvas-body p-4 pt-0 p-lg-0">
+            <hr class="d-lg-none text-white-50">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+              {{ data.main.map(item=>{ }}
+              <li class="nav-item col-6 col-lg-auto">
+                <a class="nav-link py-2 px-0 px-lg-2" href="{{=item.href}}">{{=item.text}}</a>
+              </li>
+              {{ }) }}
+            </ul>
+            <hr class="d-lg-none text-white-50">
+
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                {{ data.right.map(item=>{ }}
+                <li class="nav-item col-6 col-lg-auto">
+                  <a class="nav-link py-2 px-0 px-lg-2" href="{{=item.href}}" target="_blank" rel="noopener">
+                    <i class="bi {{=item.icon}}"></i>
+                    <small class="d-lg-none ms-2">{{=item.text}}</small>
+                  </a>
+                </li>
+                {{ }) }}
+                <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                    <hr class="d-lg-none my-2 text-white-50">
+                </li>
+            </ul>
+
+            <ul class="navbar-nav flex-row flex-wrap "
+            data-link="./elements/header-version.html"></ul>
+
+            <ul class="navbar-nav flex-row flex-wrap "
+            data-link="./elements/header-userInfor.html"></ul>
+
+            <ul class="navbar-nav flex-row flex-wrap "
+            data-link="./elements/header-themed.html">
+            </ul>
+            
+        </div>
+    </div>
+</nav>

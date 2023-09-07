@@ -1,0 +1,42 @@
+<li class="nav-item dropdown col-6 col-md-auto">
+    <a class="nav-link p-2" href="/user/login">
+      <i class="bi bi-person-exclamation"></i>
+      <small class="d-md-none ms-2">Login</small>
+    </a>
+  </li>
+  
+  <li class="nav-item col-6 col-md-auto" 
+      data-link="./header-userInfor-sms.html"
+      data-link-data="/api/Comment?seach=1&field=status"
+  ></li>
+  
+  <li class="nav-item dropdown col-6 col-md-auto">
+    <a href="/setting/index" class="nav-link dropdown-toggle p-2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="bi bi-person-circle"></i>
+      <small class="d-md-none ms-2">User</small>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end z-index-100 fixed-top">
+          <li><a 
+            data-bs-toggle="modal" 
+            data-bs-target="#userProfileModal"
+            href="#" class="dropdown-item">
+            <i class="bi bi-person-lines-fill"></i>
+            Profile
+          </a></li>
+          <li><a href="/user/edit" class="dropdown-item">
+            <i class="bi bi-person-gear"></i>
+            Edit User Profile
+          </a></li>
+          <li><a href="/user/logout" class="dropdown-item">
+            <i class="bi bi-box-arrow-in-right"></i>
+            Logout
+          </a></li>
+    </ul>
+  </li>
+
+
+<script>
+
+
+
+</script>

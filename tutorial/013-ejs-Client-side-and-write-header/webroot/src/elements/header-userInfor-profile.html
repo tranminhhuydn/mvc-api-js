@@ -1,0 +1,21 @@
+  
+    <a class="nav-link p-2 position-relative" 
+    id="menu-bd-userInfor-sms" 
+    data-bs-toggle="modal" 
+    data-bs-target="#smsModal"
+    href="#" 
+    data-bs-display="static" 
+    role="button" 
+    aria-expanded="true">
+      <i class="bi bi-envelope"></i>
+      {{ 
+        if(data.count){ 
+            data.count = data.count<99? data.count:"+99"
+      }}
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger p-1">
+        {{-data.count }}
+        <span class="visually-hidden">unread messages</span>
+      </span>
+      {{ } }}
+      <small class="d-md-none ms-2">Inbox</small>
+    </a>
