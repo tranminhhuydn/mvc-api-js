@@ -24,8 +24,8 @@ i18next
 .init({
     fallbackLng: 'en',
     backend: {
-      loadPath: './config/locales/{{lng}}/translation.json',
-      addPath: './config/locales/{{lng}}/{{ns}}.missing.json'
+        loadPath: './config/locales/{{lng}}/translation.json',
+        addPath: './config/locales/{{lng}}/{{ns}}.missing.json'
     },
     saveMissing: true
 })

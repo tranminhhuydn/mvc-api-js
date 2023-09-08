@@ -1,0 +1,14 @@
+{
+    "main":[
+        {"text":"Docs","href":"#"},
+        {"text":"Examples","href":"#"},
+        {"text":"icons","href":"#"},
+        {"text":"Themes","href":"#"},
+        {"text":"Blog","href":"#"}
+    ],
+    "right":[
+        {"GitHub":"Docs","href":"#","icon":"bi-github"},
+        {"Twitter":"Examples","href":"#","icon":"bi-twitter"},
+        {"text":"access-circle","href":"#","icon":"bi-universal-access-circle"}
+    ]
+}

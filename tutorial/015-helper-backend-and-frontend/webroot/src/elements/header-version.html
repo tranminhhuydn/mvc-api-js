@@ -1,0 +1,34 @@
+{{
+    versions = [
+    {text:"v5 releases",href:"#",tag:"h6",class:"dropdown-header"},
+    {text:"Latest (5.3.x) <svg class=\"bi\"><use xlink:href=\"#check2\"></use></svg>",href:"#",tag:"a",class:"dropdown-item d-flex align-items-center justify-content-between active"},
+    {text:"v5.2.3",href:"#",tag:"a",class:"dropdown-item"},
+    {text:"v5.0.2",href:"#",tag:"a",class:"dropdown-item"},
+    {text:"",href:"#",tag:"hr",class:"dropdown-divider"},
+    {text:"Previous releases",href:"#",tag:"h6",class:"dropdown-header"},
+    {text:"v4.6.x",href:"#",tag:"a",class:"dropdown-item"},
+    {text:"v3.4.1",href:"#",tag:"a",class:"dropdown-item"},
+    {text:"v2.3.2",href:"#",tag:"a",class:"dropdown-item"},
+    {text:"All versions",href:"#",tag:"a",class:"dropdown-item"},
+    ]
+}}
+
+  <li class="nav-item dropdown">
+    <button 
+      type="button" 
+      class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" 
+      data-bs-toggle="dropdown" aria-expanded="false" 
+      data-bs-display="static">
+      <span class="d-lg-none" aria-hidden="true">Bootstrap</span><span class="visually-hidden">Bootstrap&nbsp;</span> v5.3 <span class="visually-hidden">(switch to other versions)</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      {{ versions.map(item=>{ }}
+        <li><{{=item.tag}} class="{{=item.class}}" href="{{=item.href}}">{{-item.text}}</{{=item.tag}}></li>
+      {{ }) }}
+    </ul>
+  </li>
+  
+  <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+    <hr class="d-lg-none my-2 text-white-50">
+  </li>
