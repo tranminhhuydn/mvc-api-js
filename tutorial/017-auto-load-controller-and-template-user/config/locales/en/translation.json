@@ -1,0 +1,23 @@
+{
+  "user": {
+    "Sign in": "Sign in",
+    "Password": "Password",
+    "Forgot password?": "Forgot password?",
+    "Remember Me": "Remember Me",
+    "Don't have an account yet?": "Don't have an account yet?",
+    "Sign up": "Sign up",
+    "Forgot your password?": "Forgot your password?",
+    "Send password reset": "Send password reset",
+    "Remember your password ?": "Remember your password ?",
+    "Enter your email and we'll send you a reset link": "Enter your email and we'll send you a reset link",
+    "Name": "Name",
+    "This field is required": "This field is required",
+    "Email address": "Email address",
+    "By clicking \"Sign up\" you agree to our": "By clicking \"Sign up\" you agree to our",
+    "Terms of Service": "Terms of Service",
+    "Already have an account?": "Already have an account?",
+    "Sign Up": "Sign Up",
+    "OR": "OR"
+  },
+  "login": "login"
+}

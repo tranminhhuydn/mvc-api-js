@@ -1,0 +1,64 @@
+<form action="{{=mountpath}}/register" method="post" class="container p-3 my-3 text-white-dark bg-purple rounded shadow-sm ">
+    <h4 class="h5 mb-0 text-white-dark lh-1 my-2 py-2 border-bottom">
+        <%=t('Register')%>
+    </h4>
+    <div class="mb-2 row g-3 align-items-center my-2">
+        <div class="col-2">
+            <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" name="name" id="inputName" class="form-control" aria-labelledby="inputNameHelpInline"
+                placeholder="Name">
+        </div>
+        <div class="col-auto">
+            <span id="inputNameHelpInline" class="form-text">
+                Must be 8-20 characters long.
+            </span>
+        </div>
+    </div>
+    <div class="mb-2 row g-3 align-items-center">
+        <div class="col-2">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" name="email" id="inputEmail" class="form-control" aria-labelledby="inputEmailHelpInline"
+                placeholder="Email">
+        </div>
+        <div class="col-auto">
+            <span id="inputEmaileHelpInline" class="form-text">
+                Must be 8-20 characters long.
+            </span>
+        </div>
+    </div>
+    <div class="mb-2 row g-3 align-items-center">
+        <div class="col-2">
+            <label for="inputPassword6" class="col-sm-2 col-form-label">Password</label>
+        </div>
+        <div class="col-auto">
+            <input type="password" name="password" id="inputPassword6" class="form-control"
+                aria-labelledby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+            <span id="passwordHelpInline" class="form-text">
+                Must be 8-20 characters long.
+            </span>
+        </div>
+    </div>
+    <div class="mb-2 row g-3 align-items-center">
+        <div class="col-2">
+            <label for="inputCheckPassword" class="col-sm-2 col-form-label">Checked Password</label>
+        </div>
+        <div class="col-auto">
+            <input type="password" name="checkPassword" id="inputCheckPassword" class="form-control"
+                aria-labelledby="inputCheckPasswordHelpInline">
+        </div>
+        <div class="col-auto">
+            <span id="inputCheckPasswordHelpInline" class="form-text">
+                Must be 8-20 characters long.
+            </span>
+        </div>
+    </div>
+    <div class="my-2 py-2 border-top ">
+        <input type="submit" name="submit" value="<%=t('Register')%>">
+    </div>
+</form>

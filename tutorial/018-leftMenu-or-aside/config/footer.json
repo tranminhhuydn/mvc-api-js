@@ -1,0 +1,135 @@
+[
+    {
+        "text": "Bootstrap",
+        "class":"col-lg-3 mb-3",
+        "url": "#",
+        "childs":[
+            {
+                "text":"Designed and built with all the love in the world by the Bootstrap team with the help of our contributors.",
+                "url":"#"
+            },
+            {
+                "text":"Code licensed MIT, docs CC BY 3.0.",
+                "url":"#"
+            },
+            {
+                "text":"Currently v5.1.3",
+                "url":"#"
+            }                
+        ]
+    }
+    , 
+    {
+        "text": "Links",
+        "class":"col-6 col-lg-2 offset-lg-1 mb-3",
+        "url": "#",
+        "childs":[
+            {
+                "text":"Home",
+                "url":"#"
+            },
+            {
+                "text":"Docs",
+                "url":"#"
+            },
+            {
+                "text":"Examples",
+                "url":"#"
+            },
+            {
+                "text":"Themes",
+                "url":"#"
+            },
+            {
+                "text":"Blog",
+                "url":"#"
+            }
+        ]
+    }, 
+    {
+        "text": "Guides",
+        "class":"col-6 col-lg-2 mb-3",
+        "url": "#",
+        "childs":[
+            {
+                "text":"Getting started",
+                "url":"#"
+            },
+            {
+                "text":"Starter template",
+                "url":"#"
+            },
+            {
+                "text":"Starter template",
+                "url":"#"
+            },
+            {
+                "text":"Webpack",
+                "url":"#"
+            },
+            {
+                "text":"Parcel",
+                "url":"#"
+            }
+        ]
+    }, 
+    {
+        "text": "Projects",
+        "class":"col-6 col-lg-2 mb-3",
+        "url": "#",
+        "childs":[
+            {
+                "text":"Bootstrap 5",
+                "url":"#"
+            },
+            {
+                "text":"Bootstrap 4",
+                "url":"#"
+            },
+            {
+                "text":"Icons",
+                "url":"#"
+            },
+            {
+                "text":"RFS",
+                "url":"#"
+            },
+            {
+                "text":"npm starter",
+                "url":"#"
+            }
+        ]
+    }
+    , 
+    {
+        "text": "Community",
+        "class":"col-6 col-lg-2 mb-3",
+        "url": "#",
+        "childs":[
+            {
+                "text":"Issues",
+                "url":"#"
+            },
+            {
+                "text":"Discussions",
+                "url":"#"
+            },
+            {
+                "text":"Corporate sponsors",
+                "url":"#"
+            },
+            {
+                "text":"Open Collective",
+                "url":"#"
+            },
+            {
+                "text":"Slack",
+                "url":"#"
+            },
+            {
+                "text":"Stack Overflow",
+                "url":"#"
+            }
+        ]
+    }
+]

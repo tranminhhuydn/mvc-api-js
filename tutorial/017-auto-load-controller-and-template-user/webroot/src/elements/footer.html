@@ -1,0 +1,12 @@
+<div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+    <div class="row">
+    {{footer.map(item=>{ }}
+        <div class="{{=item.class}}">
+            <h5>{{=item.text}}</h5>
+            <ul class="list-unstyled">{{ item.childs.map(child=>{ }}
+                <li class="mb-2"><a href="{{=child.url}}">{{=child.text}}</a></li>{{ }) }}
+            </ul>
+        </div>
+    {{ }) }}
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<form action="{{=controller}}/register" method="post"
+    class="container p-3 my-3 text-white-dark bg-purple rounded shadow-sm ">
+    <div id="signup_div_wrapper">
+        <h1 class="mb-1 text-center">{{=t('user.Sign up')}}</h1>
+
+        <p class="form-row form-row-last">
+            <label for="reg_sr_name">{{=t('user.Name')}} <span class="required">*</span></label>
+            <input type="text" class="input-text form-control"
+                name="name" id="reg_sr_name" value="" required>
+            <div class="invalid-feedback">{{=t('user.This field is required')}}</div>
+        </p>
+
+        <p class="form-row form-row-wide">
+            <label for="reg_email">{{=t('user.Email address')}} <span class="required">*</span></label>
+            <input type="email" class="input-text form-control" 
+                name="email"
+                id="reg_email" required>
+            <div class="invalid-feedback">{{=t('user.This field is required')}}</div>
+        </p>
+
+        <p class="form-row form-row-wide">
+            <label for="reg_password">{{=t('user.Password')}} <span class="required">*</span></label>
+            <input type="password" class="input-text form-control"
+                name="password" id="reg_password" required="">
+            <div class="invalid-feedback">{{=t('user.This field is required')}}</div>
+        </p>
+        <!-- Spam Trap -->
+
+        <div class="clear"></div>
+        <p class="form-row">
+            <input
+            type="submit" class="btn btn-primary w-100 btn-block btn-lg mb-4 mt-3" style="margin:0;" name="register"
+            value="{{=t('user.Sign up')}}">
+        </p>
+
+        <p class="text-gray-soft text-center small mb-2">{{=t('user.By clicking "Sign up" you agree to our')}} <a
+                href="/user/terms">{{=t('user.Terms of Service')}}</a>.</p>
+        <p class="text-gray-soft text-center small mb-2">{{=t('user.Already have an account?')}} <a
+                href="/user/login">{{=t('user.Sign in')}}</a></p>
+    </div>
+</form>

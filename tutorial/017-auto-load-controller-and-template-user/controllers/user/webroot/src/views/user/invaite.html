@@ -1,0 +1,47 @@
+<form action="<%=req.path+href%>" method="post" >
+<div class="container p-3 my-3 text-white-dark bg-purple rounded shadow-sm ">
+
+    <nav class="bd-subnavbar my-2 py-2 mx-1 " aria-label="Secondary navigation">
+      <div class="container-xxl d-flex align-items-md-center">
+        <h3 class="h6 mb-0 text-white-dark lh-1"><%=title%></h3>
+        <div class="d-flex ms-auto">
+          <input type="text" name="seach" value="<%=req.body.seach%>" class="form-control" placeholder="seach" aria-label="Input group example" aria-describedby="btnGroupAddon">
+          <%-createSelect(fields,'filed',req.body.filed,'form-control')%>
+          <!-- <button type="submit" class="DocSearch DocSearch-Button" aria-label="Search" value="<%=t('Search')%>"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button>  -->
+          <input type="submit" name="submit" value="<%=t('Seach')%>">
+          <input type="submit" name="submit" value="<%=t('Save')%>">
+        </div>
+      </div>
+    </nav>
+
+<div class="row border-bottom mx-1 my-2 py-2 bd-gray-600 text-white ">
+  <div class="col-2">Name</div>
+  <div class="col-auto">Access Role</div>
+</div>
+<% Users.content.map(user=>{%>
+<div class="row border-bottom mx-1">
+  <div class="col-2"><%=user.name%></div>
+  <div class="col-auto  py-2">
+    <% req.role.map((r,k)=>{%>
+      <% checked=user.role==r?'checked':''%>
+        <input type="radio" class="btn-check" autocomplete="off" id="<%=user.id+r%>" name="<%=user.id%>" value="<%=r%>" <%=checked%>>
+        <label class="btn btn-sm btn-outline-primary" for="<%=user.id+r%>"><%=r%></label>
+      <% })%>
+  </div>
+</div>
+<% })%>
+</form>
+
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <ul class="btn-group me-2" role="group" aria-label="First group"></div>
+    <li type="button" class="btn btn-primary">total: <%=Users.totalPage%></li>
+  <% //createPagination(Users.totalPage,req.query.page,'btn btn-secondary','text-white')%>
+  </ul>
+
+  <div class="btn-group me-2" role="group" aria-label="First group">
+    <% for(var i=1;i<=Users.totalPage;i++ ){ %>
+    <%  href = href.replace(/page=\d+/g,'page='+i) %>
+    <a type="button" class="btn btn-secondary" href="<%=req.path+href%>"><%=i%></a>
+    <%}%>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+
+
+<form action="/user/login" method="post" class="container p-3 my-3 text-white-dark bg-purple rounded shadow-sm ">
+    <h4 class="h5 mb-0 text-white-dark lh-1 my-2 py-2 border-bottom">
+      {{=t('login')}}
+    </h4>
+  
+    <div class="my-2 mb-2 row g-3">
+      <div class="col-2">
+        <label for="email">Email:
+      </div>
+      <div class="col-auto">
+        <input type="text" name="email" placeholder="email">
+      </div>
+    </div>
+    <div class="mb-2 row g-3">
+      <div class="col-2">
+        <label for="password">Password:</label>
+      </div>
+      <div class="col-auto">
+        <input type="password" name="password">
+      </div>
+  
+    </div>
+  
+    <div class="my-2 py-2 border-top ">
+      <input type="submit" name="submit" value="{{=t('login')}}">
+      <a href="/user/register"> register </a>
+    </div>
+  </form>
+  -OR-
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="/js/jwt-decode.js"></script>
+  <script>
+  function handleCredentialResponse(response) {
+      //alert('callback')
+      ///console.log("Encoded JWT ID token: " + response.credential);
+      token = jwt_decode(response.credential)
+      //console.log(token);
+      
+      var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/user/loginProvider');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function() {
+            if(xhr.responseText == 'success'){
+                location.assign('/user/profile')
+            }else{
+              console.log(xhr.responseText)
+              location.assign(xhr.responseText)
+            }
+        };
+        xhr.send(JSON.stringify({token : token}));
+  }
+  window.onload = function () {
+      google.accounts.id.initialize({
+          client_id: "563587575029-89224il8qt9bc2i5d3f15fucn6nutv0t.apps.googleusercontent.com",
+          callback: handleCredentialResponse
+      });
+      google.accounts.id.renderButton(
+      document.getElementById("buttonDiv"),
+      { theme: "outline", size: "large" }  // customization attributes
+      );
+      google.accounts.id.prompt(); // also display the One Tap dialog
+  }
+  </script>
+  <div id="buttonDiv"></div> 
